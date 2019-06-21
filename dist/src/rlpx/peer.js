@@ -234,8 +234,8 @@ var Peer = /** @class */ (function (_super) {
         }
     };
     Peer.prototype._handleMessage = function (code, msg) {
-        var _this = this;
         var e_2, _a, e_3, _b, e_4, _c;
+        var _this = this;
         var payload = rlp_encoding_1.default.decode(msg);
         switch (code) {
             case PREFIXES.HELLO:
@@ -276,7 +276,7 @@ var Peer = /** @class */ (function (_super) {
                     for (var _f = __values(this._hello.capabilities), _g = _f.next(); !_g.done; _g = _f.next()) {
                         var item = _g.value;
                         try {
-                            for (var _h = __values(this._capabilities), _j = _h.next(); !_j.done; _j = _h.next()) {
+                            for (var _h = (e_4 = void 0, __values(this._capabilities)), _j = _h.next(); !_j.done; _j = _h.next()) {
                                 var obj = _j.value;
                                 if (obj.name !== item.name || obj.version !== item.version)
                                     continue;

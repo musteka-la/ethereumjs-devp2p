@@ -54,9 +54,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var e_1, _a;
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var e_1, _a;
 var devp2p = __importStar(require("../src"));
 var src_1 = require("../src");
 var ethereumjs_tx_1 = __importDefault(require("ethereumjs-tx"));
@@ -138,7 +138,8 @@ rlpx.on('peer:added', function (peer) {
         peer.once('close', function () { return clearTimeout(forkDrop); });
     });
     eth.on('message', function (code, payload) { return __awaiter(_this, void 0, void 0, function () {
-        var e_2, _a, e_3, _b, _c, _loop_1, payload_1, payload_1_1, item, payload_2, payload_2_1, item, tx, headers, expectedHash, header, isValidPayload_1, header_1, _loop_2, state_1, isValidPayload, header, block, isValid, newBlock, isValidNewBlock;
+        var _a, _loop_1, payload_1, payload_1_1, item, payload_2, payload_2_1, item, tx, headers, expectedHash, header, isValidPayload_1, header_1, _loop_2, state_1, isValidPayload, header, block, isValid, newBlock, isValidNewBlock;
+        var e_2, _b, e_3, _c;
         return __generator(this, function (_d) {
             switch (_d.label) {
                 case 0:
@@ -148,8 +149,8 @@ rlpx.on('peer:added', function (peer) {
                     else {
                         requests.msgTypes[code] = 1;
                     }
-                    _c = code;
-                    switch (_c) {
+                    _a = code;
+                    switch (_a) {
                         case devp2p.ETH.MESSAGE_CODES.NEW_BLOCK_HASHES: return [3 /*break*/, 1];
                         case devp2p.ETH.MESSAGE_CODES.TX: return [3 /*break*/, 2];
                         case devp2p.ETH.MESSAGE_CODES.GET_BLOCK_HEADERS: return [3 /*break*/, 3];
@@ -184,7 +185,7 @@ rlpx.on('peer:added', function (peer) {
                     catch (e_2_1) { e_2 = { error: e_2_1 }; }
                     finally {
                         try {
-                            if (payload_1_1 && !payload_1_1.done && (_a = payload_1.return)) _a.call(payload_1);
+                            if (payload_1_1 && !payload_1_1.done && (_b = payload_1.return)) _b.call(payload_1);
                         }
                         finally { if (e_2) throw e_2.error; }
                     }
@@ -203,7 +204,7 @@ rlpx.on('peer:added', function (peer) {
                     catch (e_3_1) { e_3 = { error: e_3_1 }; }
                     finally {
                         try {
-                            if (payload_2_1 && !payload_2_1.done && (_b = payload_2.return)) _b.call(payload_2);
+                            if (payload_2_1 && !payload_2_1.done && (_c = payload_2.return)) _c.call(payload_2);
                         }
                         finally { if (e_3) throw e_3.error; }
                     }

@@ -133,8 +133,8 @@ var DPT = /** @class */ (function (_super) {
         (_a = this._server).destroy.apply(_a, __spread(args));
     };
     DPT.prototype._onKBucketPing = function (oldPeers, newPeer) {
-        var _this = this;
         var e_1, _a;
+        var _this = this;
         if (this.banlist.has(newPeer))
             return;
         var count = 0;

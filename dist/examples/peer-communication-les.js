@@ -54,9 +54,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var e_1, _a;
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var e_1, _a;
 var devp2p = __importStar(require("../src"));
 var ethereumjs_block_1 = __importDefault(require("ethereumjs-block"));
 var ms_1 = __importDefault(require("ms"));

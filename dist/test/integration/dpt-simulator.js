@@ -196,7 +196,8 @@ tape_1.default('DPT: add non-available node', function (t) { return __awaiter(_t
     });
 }); });
 tape_1.default('DPT: simulate bootstrap', function (t) { return __awaiter(_this, void 0, void 0, function () {
-    var e_1, _a, e_2, _b, e_3, _c, numDPTs, dpts, _d, _e, dpt, e_1_1, dpts_1, dpts_1_1, dpt, e_2_1, dpts_2, dpts_2_1, dpt;
+    var numDPTs, dpts, _a, _b, dpt, e_1_1, dpts_1, dpts_1_1, dpt, e_2_1, dpts_2, dpts_2_1, dpt;
+    var e_1, _c, e_2, _d, e_3, _e;
     return __generator(this, function (_f) {
         switch (_f.label) {
             case 0:
@@ -214,17 +215,17 @@ tape_1.default('DPT: simulate bootstrap', function (t) { return __awaiter(_this,
                 _f.label = 4;
             case 4:
                 _f.trys.push([4, 9, 10, 11]);
-                _d = __values(dpts.slice(2)), _e = _d.next();
+                _a = __values(dpts.slice(2)), _b = _a.next();
                 _f.label = 5;
             case 5:
-                if (!!_e.done) return [3 /*break*/, 8];
-                dpt = _e.value;
+                if (!!_b.done) return [3 /*break*/, 8];
+                dpt = _b.value;
                 return [4 /*yield*/, dpt.bootstrap({ address: util.localhost, udpPort: util.basePort + 1 })];
             case 6:
                 _f.sent();
                 _f.label = 7;
             case 7:
-                _e = _d.next();
+                _b = _a.next();
                 return [3 /*break*/, 5];
             case 8: return [3 /*break*/, 11];
             case 9:
@@ -233,7 +234,7 @@ tape_1.default('DPT: simulate bootstrap', function (t) { return __awaiter(_this,
                 return [3 /*break*/, 11];
             case 10:
                 try {
-                    if (_e && !_e.done && (_a = _d.return)) _a.call(_d);
+                    if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
                 }
                 finally { if (e_1) throw e_1.error; }
                 return [7 /*endfinally*/];
@@ -259,7 +260,7 @@ tape_1.default('DPT: simulate bootstrap', function (t) { return __awaiter(_this,
                 return [3 /*break*/, 18];
             case 17:
                 try {
-                    if (dpts_1_1 && !dpts_1_1.done && (_b = dpts_1.return)) _b.call(dpts_1);
+                    if (dpts_1_1 && !dpts_1_1.done && (_d = dpts_1.return)) _d.call(dpts_1);
                 }
                 finally { if (e_2) throw e_2.error; }
                 return [7 /*endfinally*/];
@@ -277,7 +278,7 @@ tape_1.default('DPT: simulate bootstrap', function (t) { return __awaiter(_this,
                 catch (e_3_1) { e_3 = { error: e_3_1 }; }
                 finally {
                     try {
-                        if (dpts_2_1 && !dpts_2_1.done && (_c = dpts_2.return)) _c.call(dpts_2);
+                        if (dpts_2_1 && !dpts_2_1.done && (_e = dpts_2.return)) _e.call(dpts_2);
                     }
                     finally { if (e_3) throw e_3.error; }
                 }

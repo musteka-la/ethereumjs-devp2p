@@ -95,7 +95,6 @@ var secp256k1_1 = require("secp256k1");
 var events_1 = require("events");
 var debug_1 = require("debug");
 var lru_cache_1 = __importDefault(require("lru-cache"));
-var package_json_1 = require("../../package.json");
 var util_1 = require("../util");
 var peer_1 = require("./peer");
 var debug = debug_1.debug('devp2p:rlpx');
@@ -108,9 +107,10 @@ var RLPx = /** @class */ (function (_super) {
         // options
         _this._timeout = options.timeout || ms_1.default('10s');
         _this._maxPeers = options.maxPeers || 10;
+        var pVersion = Promise.resolve().then(function () { return __importStar(require('../../package.json')); });
         _this._clientId = options.clientId
             ? Buffer.from(options.clientId)
-            : Buffer.from("ethereumjs-devp2p/v" + package_json_1.version + "/" + os.platform() + "-" + os.arch() + "/nodejs");
+            : Buffer.from("ethereumjs-devp2p/v" + pVersion + "/" + os.platform() + "-" + os.arch() + "/nodejs");
         _this._remoteClientIdFilter = options.remoteClientIdFilter;
         _this._capabilities = options.capabilities;
         _this._listenPort = options.listenPort;

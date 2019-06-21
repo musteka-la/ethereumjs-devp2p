@@ -5,7 +5,6 @@ import { publicKeyCreate } from 'secp256k1'
 import { EventEmitter } from 'events'
 import { debug as createDebugLogger } from 'debug'
 import LRUCache from 'lru-cache'
-import { version as pVersion } from '../../package.json'
 import { pk2id, createDeferred } from '../util'
 import { Peer, DISCONNECT_REASONS, Capabilities } from './peer'
 import { DPT, PeerInfo } from '../dpt'
@@ -48,6 +47,7 @@ export class RLPx extends EventEmitter {
     this._timeout = options.timeout || ms('10s')
     this._maxPeers = options.maxPeers || 10
 
+    const pVersion = import('../../package.json')
     this._clientId = options.clientId
       ? Buffer.from(options.clientId)
       : Buffer.from(`ethereumjs-devp2p/v${pVersion}/${os.platform()}-${os.arch()}/nodejs`)
