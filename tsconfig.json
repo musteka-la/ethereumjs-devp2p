@@ -1,15 +1,20 @@
 {
   "extends": "@ethereumjs/config-tsc",
-  "include": ["src/**/*.ts", "test/**/*.ts", "examples/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "examples/**/*.ts"
+  ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "*": ["definitions/*"]
+      "*": [
+        "definitions/*"
+      ]
     },
-    "typeRoots": ["definitions", "node_modules/@types"],
-    "declaration": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true
+    "typeRoots": [
+      "definitions",
+      "node_modules/@types"
+    ]
   }
 }
